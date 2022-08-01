@@ -1,6 +1,6 @@
 # JiraAdf
 
-[Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/) is how Jira and friends format rich text. This tools helps you make those rich texts in ruby, with a neat builder-like syntax.
+[Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/) is how Jira and friends format rich text. This tool helps you make those rich texts in ruby, with a neat builder-like syntax.
 
 ## Installation
 
@@ -55,6 +55,8 @@ If you want to specify custom doc type / version, you can pass args to the `Jira
 result = JiraAdf(version: 2, type: 'doc') { … }
 result.to_h
 ```
+
+To see an example of the hash it produces, check out the [test file](test/test_jira_adf.rb).
 
 ## Development
 
