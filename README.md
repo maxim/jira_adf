@@ -39,7 +39,7 @@ result = JiraAdf {
 
         # Methods chained at the end of the node become "marks". Their
         # keyword args become "attrs" of the mark.
-        text('bold and superscript').strong.subsup(type: 'sub')
+        text('bold and superscript').strong.subsup(type: 'sup')
 
         text(' styling in the middle.')
       }
