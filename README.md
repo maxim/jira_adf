@@ -2,6 +2,18 @@
 
 [Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/) is how Jira and friends format rich text. This tool helps you make those rich texts in ruby, with a neat builder-like syntax.
 
+Important note: this gem is like ~65LOC, and doesn't actually know anything about most ADF keywords. It's based entirely upon `method_missing`.
+
+#### The only 5 things this gem does
+
+1. All `bare_word` become `{ type: 'bareWord' }` (it will auto-camelize)
+2. Every item in a block goes into `content` array of the receiver
+3. Every method chained at the back becomes `marks`
+4. All keyword arguments become `attrs` (this also applies to chained marks)
+5. `text` accepts one argument to be the text itself, but otherwise acts as any other bare word
+
+From what I've found so far, these 5 rules allow you to do anything with ADF. Submit issues if I'm wrong.
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
