@@ -14,6 +14,8 @@ Important note: this gem is like ~65LOC, and doesn't actually know anything abou
 
 From what I've found so far, these 5 rules allow you to do anything with ADF. Submit issues if I'm wrong.
 
+To learn the actual keywords and structure, refer to the [official ADF docs](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/).
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
